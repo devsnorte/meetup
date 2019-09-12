@@ -48,11 +48,11 @@ class UserDatatable < AjaxDatatablesRails::Base
   # rubocop:enable Naming/AccessorMethodName
 
   def records_total_count
-    fetch_records.unscope(:group).count(:all)
+    fetch_records.unscope(:group).count('users.id')
   end
 
   def records_filtered_count
-    filter_records(fetch_records).unscope(:group).count(:all)
+    filter_records(fetch_records).unscope(:group).count('users.id')
   end
 
   # ==== These methods represent the basic operations to perform on records
