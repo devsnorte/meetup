@@ -1,4 +1,4 @@
-$navbar-default-bg: #299a0b;
+$navbar-default-bg: #00ab6e;
 $navbar-default-link-active-bg: #DFE0DF;
 $navbar-default-border: 1px solid #d4d4d4;
 $navbar-default-color: #ffffff;
@@ -64,3 +64,7 @@ $navbar-default-link-hover-color: #000000;
 
 // semantic classes
 @import "osem-datatables";
+
+.btn-success {
+  background-color: #00ab6e;
+}
