@@ -4,11 +4,11 @@
       .row
         .col-md-4.text-center
           = image_tag(conference.picture_url, class: 'img-responsive') if conference.picture?
-        .col-md-6
+        .col-md-5
           %h3
             = conference.title
-            %small
-              %b
+          %small
+            %b
               = date_string(conference.start_date, conference.end_date)
           - if conference.venue
             %p
@@ -16,7 +16,8 @@
           - unless conference.description.blank?
             %p
               = markdown(conference.description)
-        .col-md-2
+        %br
+        .col-md-3
           .btn-group-vertical
             - if !@conference || @conference != conference
               - if conference.splashpage && conference.splashpage.public
